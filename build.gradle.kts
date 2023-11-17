@@ -3,5 +3,7 @@
 plugins {
     alias(libs.plugins.com.android.application) apply false
     alias(libs.plugins.org.jetbrains.kotlin.android) apply false
+    kotlin(libs.plugins.plugin.serialization.get().pluginId) version(libs.plugins.plugin.serialization.get().version.toString()) apply false
+    alias(libs.plugins.ksp) apply false
 }
 true // Needed to make the Suppress annotation work for the plugins block
